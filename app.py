@@ -6,14 +6,14 @@ import json
 import pandas as pd
 from datetime import date
 
-app = Flask(name)
+app = Flask(__name__)
 
 def get_data(url,token):
     response = requests.get(url,headers={'Authorization': token})
     data = response.json()
     return data
 
-@app.route('/',methods=['GET'])
+@app.route('/predict',methods=['GET'])
 def index():
     car_id=request.args.get('carID')
     token = request.headers.get('Authorization')
