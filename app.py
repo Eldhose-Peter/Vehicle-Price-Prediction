@@ -38,19 +38,16 @@ def convert_json_to_df(data):
 
     km_driven = data.get("kmDriven");
     mileage = data.get("mileage");
-    #engine = data.get("engine"); # engine CC
-    engine = 1500; # engine CC
-    #max_power = data.get("maxPower"); # max power in bhp
-    max_power = 100; # max power in bhp
+    engine = data.get("engine"); # engine CC
+    max_power = data.get("maxPower"); # max power in bhp
     seats = data.get("seats");
-    #avg_cost_price = data.get("lastPrice"); # avg price of the new models
-    avg_cost_price = 11.0; # avg price of the new models
+    avg_cost_price = data.get("avg_cost_price"); # avg price of the new models
     fuel_type = data.get("fuelType");
     transmission_type = data.get("transmissionType");
     sellerType = data.get("ownerLevel"); # 0 , is manufacturer
     brand = data.get("make");
-    #model = data.get("model");
-    model = "Ecosport";
+    model = data.get("model");
+
 
     my_dict = {
         'vehicle_age':vehicle_age, 
